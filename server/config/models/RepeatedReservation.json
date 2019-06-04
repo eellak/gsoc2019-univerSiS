@@ -1,0 +1,106 @@
+{
+  "name": "RepeatedReservation",
+  "id": 5,
+  "title": "Repeated Reservation",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.0",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of repeated reservation.",
+      "type": "Integer",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "The name of the repeated reservation",
+      "type": "Text",
+      "nullable": false,
+      "size": 60
+    },
+    {
+      "name": "startDate",
+      "title": "Start Date",
+      "description": "The start date of the repeated reservation.",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "reservationType",
+      "title": "Reservation Type",
+      "description": "Type of the reservation ( daily , weekly , monthly )",
+      "type": "Text",
+      "nullable": false
+    },
+    {
+      "name": "duration",
+      "title": "Duration",
+      "description": "Duration of the reservation (days, weeks, months according to the reservation type)",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "startTime",
+      "title": "Start Time",
+      "description": "The start time of the repeated reservation.",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "timeDuration",
+      "title": "Time Duration",
+      "description": "The time duration of the repeated reservation in minutes.",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "courseClassId",
+      "title": "Course Class Id",
+      "description": "Course ID",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "roomId",
+      "title": "Room ID",
+      "description": "Id of the reservation room",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "departmentId",
+      "title": "Department Id",
+      "description": "Id of the reservation department",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "status",
+      "title": "Status",
+      "description": "Status of the reservation (open or close)",
+      "type": "Boolean",
+      "nullable": false
+    },
+    {
+      "name": "note",
+      "title": "Note",
+      "description": "Additional notes about the reservation",
+      "type": "Text",
+      "nullable": false
+    }
+  ],
+  "constraints": [
+    {
+      "type": "unique",
+      "fields": [
+        "name"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+    "name": "RoomType",
+    "id": 4,
+    "title": "Room Type",
+    "hidden": false,
+    "sealed": false,
+    "abstract": false,
+    "caching": "always",
+    "implements": "Enumeration",
+    "category": "lookup",
+    "version": "1.0",
+    "fields": [
+        {
+            "name": "id",
+            "title": "Id",
+            "type": "Counter",
+            "nullable": false,
+            "primary": true
+        },
+        {
+            "name": "name",
+            "title": "Name",
+            "description": "The name of the Room Type",
+            "type": "Text",
+            "nullable": false,
+            "size": 60
+          }
+    ],
+    "privileges": [
+        {
+            "mask": 1,
+            "type": "global",
+            "account": "*"
+        },
+        {
+            "mask": 15,
+            "type": "global"
+        }
+    ],
+    "constraints": [
+        {
+            "type": "unique",
+            "description": "Name must be unique across different records",
+            "fields": [
+                "name"
+            ]
+        }
+    ]
+}

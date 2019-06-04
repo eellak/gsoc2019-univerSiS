@@ -1,0 +1,65 @@
+{
+    "name": "DepartmentHoliday",
+    "id": 1,
+    "title": "Department Holiday",
+    "hidden": false,
+    "sealed": false,
+    "abstract": false,
+    "version": "1.0",
+    "fields": [
+      {
+        "name": "id",
+        "title": "Id",
+        "description": "The primary key of holiday entry.",
+        "type": "Integer",
+        "nullable": false,
+        "primary": true,
+        "size": 4
+      },
+      {
+        "name": "name",
+        "title": "Name",
+        "description": "The special name of the given holiday",
+        "type": "Text",
+        "nullable": false,
+        "size": 60
+      },
+      {
+        "name": "startDate",
+        "title": "Start Date",
+        "description": "The start date of the holiday",
+        "type": "DateTime",
+        "nullable": false
+      },
+      {
+        "name": "endDate",
+        "title": "End Date",
+        "description": "the end date of the holiday",
+        "type": "DateTime",
+        "nullable": false
+      },
+      {
+        "name": "note",
+        "title": "Note",
+        "description": "Any special note about the given holiday",
+        "type": "Text",
+        "nullable": true,
+        "size": 150
+      },
+      {
+        "name": "departmentId",
+        "title": "Department ID",
+        "description": "A specific holiday belongs to specific department.",
+        "type": "Department",
+        "expandable": true
+      }
+    ],
+    "constraints": [
+      {
+        "type": "unique",
+        "fields": [
+          "name"
+        ]
+      }
+    ]
+  }

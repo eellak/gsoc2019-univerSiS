@@ -1,0 +1,48 @@
+{
+  "name": "RepeatedReservationDates",
+  "id": 2,
+  "title": "Repeated Reservation Dates",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.0",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of the repeated date.",
+      "type": "Integer",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "date",
+      "title": "Date",
+      "description": "Reservation Date",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "startTime",
+      "title": "Start Time",
+      "description": "Start time of the reservation",
+      "type": "DateTime",
+      "nullable": true
+    },
+    {
+      "name": "endTime",
+      "title": "End Time",
+      "description": "End time of the reservation.",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "repeatedReservationId",
+      "title": "Repeated Reservation Id",
+      "description": "ID of the repeated reservation",
+      "type": "RepeatedReservation",
+      "expandable": true
+    }
+  ]
+}
