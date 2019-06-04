@@ -1,5 +1,6 @@
 {
   "name": "Instructor",
+  "id" : 2,
   "title": "Instructor",
   "description":"Element of course class or examiner",
   "hidden": false,

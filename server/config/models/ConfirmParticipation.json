@@ -1,6 +1,6 @@
 {
   "name": "ConfirmParticipation",
-  "id": 2,
+  "id": 13,
   "title": "Confirm Participation",
   "hidden": false,
   "sealed": false,
@@ -23,6 +23,6 @@
       "type": "Student",
       "expandable": true
     }
-    }
+
   ]
 }
