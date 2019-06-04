@@ -1,0 +1,41 @@
+{
+    "settings": {
+        "crypto": {
+            "algorithm": "sha256",
+            "key": "5ad5642cb1dbedd72afcf61db97ca3e75155c7ee45cceb004407f5d7d1579ac9f574c1c2d1c0153b2ff1d1d2bd0dd3b6"
+        },
+        "auth": {
+            "name": ".MAUTH",
+            "timeout": 480,
+            "slidingExpiration": false,
+            "unattendedExecutionAccount": "pnMrYcyM4adzH0yS"
+        },
+        "i18n": {
+            "locales": [
+                "en"
+            ],
+            "defaultLocale": "en"
+        }
+    },
+    "adapterTypes": [
+        {
+            "name": "MySQL Data Adapter",
+            "invariantName": "mssql",
+            "type": "@themost/mssql"
+        }
+    ],
+    "adapters": [
+        {
+            "name": "development",
+            "invariantName": "mssql",
+            "default": true,
+            "options": {
+                "server": "localhost",
+                "user": "root",
+                "password": "chanaka",
+                "database": "universis",
+                "requestTimeout":30000
+            }
+        }
+    ]
+}
