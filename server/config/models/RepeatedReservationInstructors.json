@@ -17,16 +17,16 @@
         "size": 4
       },
       {
-        "name": "repeatedReservationId",
-        "title": "Repeated Reservation Id",
-        "description": "ID of the repeated reservation",
+        "name": "repeatedReservation",
+        "title": "Repeated Reservation",
+        "description": "Information of the repeated reservation",
         "type": "RepeatedReservation",
         "expandable": true
       },
       {
-        "name": "instructorId",
-        "title": "Instructor Id",
-        "description": "ID of the instructor",
+        "name": "instructor",
+        "title": "Instructor",
+        "description": "Information of the instructor",
         "type": "Instructor",
         "expandable": true
       }

@@ -39,8 +39,8 @@
       "nullable": false
     },
     {
-      "name": "department_id",
-      "title": "Department ID",
+      "name": "department",
+      "title": "Department",
       "description": "Department of the building",
       "type": "Department",
       "expandable": true

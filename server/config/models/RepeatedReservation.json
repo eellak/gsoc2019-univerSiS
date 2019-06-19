@@ -60,23 +60,23 @@
       "nullable": false
     },
     {
-      "name": "courseClassId",
-      "title": "Course Class Id",
-      "description": "Course ID",
+      "name": "courseClass",
+      "title": "Course Class",
+      "description": "Course Class ID",
       "type": "Integer",
       "nullable": false
     },
     {
-      "name": "roomId",
-      "title": "Room ID",
-      "description": "Id of the reservation room",
+      "name": "room",
+      "title": "Room",
+      "description": "Information of the reservation room",
       "type": "Integer",
       "nullable": false
     },
     {
-      "name": "departmentId",
-      "title": "Department Id",
-      "description": "Id of the reservation department",
+      "name": "department",
+      "title": "Department",
+      "description": "Information of the reservation department",
       "type": "Integer",
       "nullable": false
     },

@@ -54,15 +54,15 @@
       "nullable": false
     },
     {
-      "name": "departmentId",
-      "title": "Department ID",
+      "name": "department",
+      "title": "Department",
       "description": "Department of the selected Room",
       "type": "Department",
       "expandable": true
     },
     {
-      "name": "buildingId",
-      "title": "Building ID",
+      "name": "building",
+      "title": "Building",
       "description": "Building of the selected Room",
       "type": "Building",
       "expandable": true

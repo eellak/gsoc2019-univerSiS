@@ -17,15 +17,15 @@
       "size": 4
     },
     {
-      "name": "onetimeReservationId",
-      "title": "Onetime Reservation Id",
+      "name": "onetimeReservation",
+      "title": "Onetime Reservation",
       "description": "ID of the onetime reservation",
       "type": "OnetimeReservation",
       "expandable": true
     },
     {
-      "name": "instructorId",
-      "title": "Instructor Id",
+      "name": "instructor",
+      "title": "Instructor",
       "description": "ID of the instructor",
       "type": "Instructor",
       "expandable": true

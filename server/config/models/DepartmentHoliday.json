@@ -47,8 +47,8 @@
         "size": 150
       },
       {
-        "name": "departmentId",
-        "title": "Department ID",
+        "name": "department",
+        "title": "Department",
         "description": "A specific holiday belongs to specific department.",
         "type": "Department",
         "expandable": true

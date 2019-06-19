@@ -17,8 +17,8 @@
       "size": 4
     },
     {
-      "name": "studentId",
-      "title": "Student ID",
+      "name": "student",
+      "title": "Student",
       "description": "ID of the related student",
       "type": "Student",
       "expandable": true

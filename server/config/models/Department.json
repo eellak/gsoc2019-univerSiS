@@ -150,7 +150,7 @@
         },
         {
             "name": "email",
-            "title": "Email address",
+            "title": "Email",
             "description": "The e-mail address of the department.",
             "type": "Text",
             "nullable": true,
