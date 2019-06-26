@@ -4,14 +4,14 @@
     "title": "Department",
     "hidden": false,
     "sealed": false,
-    "version": "1.0",
+    "version": "1.1",
     "caching": "always",
     "fields": [
         {
             "name": "id",
             "title": "ID",
             "description": "The primary key of the department.",
-            "type": "Text",
+            "type": "Counter",
             "nullable": false,
             "size": 5,
             "primary": true

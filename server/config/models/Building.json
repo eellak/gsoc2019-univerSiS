@@ -1,17 +1,18 @@
 {
   "name": "Building",
+  "inherits": "Place",
   "id": 3,
   "title": "Building",
   "hidden": false,
   "sealed": false,
   "abstract": false,
-  "version": "1.0",
+  "version": "1.1",
   "fields": [
     {
       "name": "id",
       "title": "Id",
       "description": "The primary key of the building.",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "primary": true,
       "size": 4

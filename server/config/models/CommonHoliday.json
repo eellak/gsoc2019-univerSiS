@@ -5,13 +5,13 @@
   "hidden": false,
   "sealed": false,
   "abstract": false,
-  "version": "1.0",
+  "version": "1.1",
   "fields": [
     {
       "name": "id",
       "title": "Id",
       "description": "The primary key of holiday entry.",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "primary": true,
       "size": 4
@@ -28,14 +28,14 @@
       "name": "startDate",
       "title": "Start Date",
       "description": "The start date of the holiday",
-      "type": "DateTime",
+      "type": "Date",
       "nullable": false
     },
     {
       "name": "endDate",
       "title": "End Date",
       "description": "the end date of the holiday",
-      "type": "DateTime",
+      "type": "Date",
       "nullable": false
     },
     {

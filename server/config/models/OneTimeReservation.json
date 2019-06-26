@@ -5,13 +5,13 @@
   "hidden": false,
   "sealed": false,
   "abstract": false,
-  "version": "1.0",
+  "version": "1.2",
   "fields": [
     {
       "name": "id",
       "title": "Id",
       "description": "The primary key of onetime reservation.",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "primary": true,
       "size": 4
@@ -28,7 +28,7 @@
       "name": "date",
       "title": "Date",
       "description": "The date of the onetime reservation.",
-      "type": "DateTime",
+      "type": "Date",
       "nullable": false
     },
     {
@@ -55,23 +55,24 @@
     {
       "name": "room",
       "title": "Room",
-      "description": "Room of the reservation room",
-      "type": "Integer",
+      "description": "Room of the reservation",
+      "type": "Room",
       "nullable": false
     },
     {
       "name": "department",
       "title": "Department",
-      "description": "Department of the reservation department",
-      "type": "Integer",
+      "description": "Department of the reservation",
+      "type": "Department",
       "nullable": false
     },
     {
       "name": "status",
       "title": "Status",
-      "description": "Status of the reservation (open or close)",
-      "type": "Boolean",
-      "nullable": false
+      "description": "Status of the reservation [Enumeration]",
+      "type": "ReservationStatusType",
+      "nullable": false,
+      "expandable": true
     },
     {
       "name": "note",
@@ -79,14 +80,6 @@
       "description": "Additional notes about the reservation",
       "type": "Text",
       "nullable": false
-    }
-  ],
-  "constraints": [
-    {
-      "type": "unique",
-      "fields": [
-        "name"
-      ]
     }
   ]
 }

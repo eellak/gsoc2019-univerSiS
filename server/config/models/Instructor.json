@@ -5,13 +5,13 @@
   "description":"Element of course class or examiner",
   "hidden": false,
   "sealed": false,
-  "version": "1.0",
+  "version": "1.1",
   "fields": [
     {
       "name": "id",
       "title": "Code",
       "description": "The primary key of holiday entry",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "size": 4,
       "primary": true

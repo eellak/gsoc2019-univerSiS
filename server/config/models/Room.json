@@ -1,17 +1,18 @@
 {
   "name": "Room",
+  "inherits": "Place",
   "id": 4,
   "title": "Room",
   "hidden": false,
   "sealed": false,
   "abstract": false,
-  "version": "1.0",
+  "version": "1.1",
   "fields": [
     {
       "name": "id",
       "title": "Id",
       "description": "The primary key of the room entity",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "primary": true,
       "size": 4
@@ -66,14 +67,6 @@
       "description": "Building of the selected Room",
       "type": "Building",
       "expandable": true
-    }
-  ],
-  "constraints": [
-    {
-      "type": "unique",
-      "fields": [
-        "name"
-      ]
     }
   ]
 }

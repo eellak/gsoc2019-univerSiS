@@ -5,13 +5,13 @@
   "hidden": false,
   "sealed": false,
   "abstract": false,
-  "version": "1.0",
+  "version": "1.1",
   "fields": [
     {
       "name": "id",
       "title": "Id",
       "description": "The primary key of onetime reservation instructor.",
-      "type": "Integer",
+      "type": "Counter",
       "nullable": false,
       "primary": true,
       "size": 4

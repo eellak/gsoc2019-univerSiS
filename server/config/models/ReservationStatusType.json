@@ -1,7 +1,7 @@
 {
-    "name": "RoomType",
-    "id": 4,
-    "title": "Room Type",
+    "name": "ReservationStatusType",
+    "id": 11,
+    "title": "Reservation Status Type",
     "hidden": false,
     "sealed": false,
     "abstract": false,
@@ -20,7 +20,7 @@
         {
             "name": "name",
             "title": "Name",
-            "description": "The name of the Room Type",
+            "description": "The name of the Reservation Status",
             "type": "Text",
             "nullable": false,
             "size": 60
@@ -28,7 +28,7 @@
         {
             "name": "description",
             "title": "Description",
-            "description": "The description of the Room Type",
+            "description": "The description of the Reservation Status",
             "type": "Text",
             "nullable": true,
             "size": 60
@@ -56,24 +56,12 @@
     ],
     "seed": [
         {
-            "name": "Office",
-            "description": "Office is used by the staff"
+            "name": "Open",
+            "description": "The reservation is open"
         },
         {
-            "name": "Computer Lab",
-            "description": "Computer Lab is used by students"
-        },
-        {
-            "name": "Lab",
-            "description": "Lab is used by students"
-        },
-        {
-            "name": "Class",
-            "description": "Class is used by students"
-        },
-        {
-            "name": "Conference",
-            "description": "Conference room is used by everyone"
+            "name": "Close",
+            "description": "The reservation is closed and not available"
         }
     ]
 }
