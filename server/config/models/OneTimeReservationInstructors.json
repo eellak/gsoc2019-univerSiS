@@ -1,0 +1,34 @@
+{
+  "name": "OnetimeReservationInstructors",
+  "id": 10,
+  "title": "Onetime Reservation Instructors",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of onetime reservation instructor.",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "onetimeReservation",
+      "title": "Onetime Reservation",
+      "description": "ID of the onetime reservation",
+      "type": "OnetimeReservation",
+      "expandable": true
+    },
+    {
+      "name": "instructor",
+      "title": "Instructor",
+      "description": "ID of the instructor",
+      "type": "Instructor",
+      "expandable": true
+    }
+  ]
+}

@@ -19,7 +19,7 @@
     },
     "adapterTypes": [
         {
-            "name": "MySQL Data Adapter",
+            "name": "MSSQL Data Adapter",
             "invariantName": "mssql",
             "type": "@themost/mssql"
         }

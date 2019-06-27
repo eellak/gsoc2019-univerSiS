@@ -1,0 +1,41 @@
+{
+  "name": "RepeatedReservationCancellation",
+  "id": 12,
+  "title": "Repeated Reservation Cancellation",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of the reservation cancellation.",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "date",
+      "title": "Date",
+      "description": "Reservation cancellation Date",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "time",
+      "title": "Time",
+      "description": "Reservation cancellation time",
+      "type": "DateTime",
+      "nullable": true
+    },
+    {
+      "name": "repeatedReservation",
+      "title": "Repeated Reservation",
+      "description": "Information of the repeated reservation",
+      "type": "RepeatedReservation",
+      "expandable": true
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "name": "Instructor",
+  "id" : 2,
+  "title": "Instructor",
+  "description":"Element of course class or examiner",
+  "hidden": false,
+  "sealed": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Code",
+      "description": "The primary key of holiday entry",
+      "type": "Counter",
+      "nullable": false,
+      "size": 4,
+      "primary": true
+    },
+    {
+      "name": "familyName",
+      "title": "Family Name",
+      "description": "Family Name",
+      "type": "Text",
+      "nullable": false,
+      "size": 30
+    },
+    {
+      "name": "givenName",
+      "title": "Given Name",
+      "description": "Given Name",
+      "type": "Text",
+      "nullable": false,
+      "size": 30
+    },
+    {
+      "name": "title",
+      "title": "Title (address)",
+      "description": "Title (address)",
+      "type": "Text",
+      "nullable": true,
+      "size": 30
+    },
+    {
+      "name": "middleName",
+      "title": "Middle Name",
+      "description": "Middle Name",
+      "type": "Text",
+      "nullable": true,
+      "size": 5
+    },
+    {
+      "name": "gender",
+      "title": "Gender",
+      "description": "Gender",
+      "type": "Gender",
+      "expandable": true,
+      "nullable": true,
+      "mapping": {
+        "parentModel": "Gender",
+        "childModel": "Instructor",
+        "parentField": "identifier",
+        "childField": "gender",
+        "associationType": "association"
+      }
+    },
+    {
+      "name": "personCode",
+      "title": "Person Code",
+      "type": "Text",
+      "nullable": true,
+      "size": 20
+    },
+    {
+      "name": "status",
+      "title": "Status",
+      "description": "Status",
+      "type": "Integer",
+      "nullable": true,
+      "size": 4
+    },
+    {
+      "name": "category",
+      "title": "Category",
+      "description": "Category",
+      "type": "Text",
+      "nullable": true,
+      "size": 100
+    },
+    {
+      "name": "isTeaching",
+      "title": "Teaches (YES / NO)",
+      "description": "Teaches (YES / NO)",
+      "type": "Boolean",
+      "nullable": true
+    },
+    {
+      "name": "expertise",
+      "title": "Expertise",
+      "description": "Expertise",
+      "type": "Text",
+      "nullable": true,
+      "size": 150
+    },
+    {
+      "name": "specialty",
+      "title": "Specialty",
+      "description": "Specialty",
+      "type": "Text",
+      "nullable": true,
+      "size": 100
+    },
+    {
+      "name": "department",
+      "title": "department",
+      "description": "The department that the instructor belongs to",
+      "type": "Department",
+      "nullable": true
+    },
+    {
+      "name": "homeAddress",
+      "title": "Home Address",
+      "description": "Home Address",
+      "type": "Text",
+      "nullable": true,
+      "size": 100
+    },
+    {
+      "name": "homePostalCode",
+      "title": "Home Postal Code",
+      "description": "Home Postal Code",
+      "type": "Text",
+      "nullable": true,
+      "size": 10
+    },
+    {
+      "name": "homeCity",
+      "title": "Home City",
+      "description": "Home City",
+      "type": "Text",
+      "nullable": true,
+      "size": 50
+    },
+    {
+      "name": "country",
+      "title": "Country of residence code",
+      "description": "Country of residence code",
+      "type": "Country",
+      "nullable": true
+    },
+    {
+      "name": "homePhone",
+      "title": "Home Phone",
+      "description": "Home Phone",
+      "type": "Text",
+      "nullable": true,
+      "size": 15
+    },
+    {
+      "name": "workAddress",
+      "title": "Work Address",
+      "description": "Work Address",
+      "type": "Text",
+      "nullable": true,
+      "size": 100
+    },
+    {
+      "name": "workPostalCode",
+      "title": "Work Postal Code",
+      "description": "Work Postal Code",
+      "type": "Text",
+      "nullable": true,
+      "size": 10
+    },
+    {
+      "name": "workCity",
+      "title": "Work city",
+      "description": "Work City",
+      "type": "Text",
+      "nullable": true,
+      "size": 50
+    },
+    {
+      "name": "workCountry",
+      "title": "Work Country",
+      "description": "Work Country",
+      "type": "Country",
+      "nullable": true
+    },
+    {
+      "name": "email",
+      "title": "Contact email address",
+      "description": "Contact email address",
+      "type": "Text",
+      "nullable": true,
+      "size": 50
+    },
+    {
+      "name": "fax",
+      "title": "Fax",
+      "description": "Fax",
+      "type": "Text",
+      "nullable": true,
+      "size": 15
+    },
+    {
+      "name": "workPhone",
+      "title": "Work Phone",
+      "description": "Work Phone",
+      "type": "Text",
+      "nullable": true,
+      "size": 15
+    },
+    {
+      "name": "url",
+      "title": "URL",
+      "description": "URL",
+      "type": "Text",
+      "nullable": true,
+      "size": 255
+    },
+    {
+      "name": "instructorCode",
+      "title": "Instructor Code",
+      "type": "Text",
+      "nullable": true,
+      "size": 20
+    },
+    {
+      "name": "dateModified",
+      "title": "Last modified date",
+      "description": "Last modified date",
+      "type": "DateTime",
+      "nullable": false,
+      "size": 8
+    },
+    {
+      "name": "user",
+      "title": "User",
+      "description": "The logged-in user",
+      "type": "User",
+      "nullable": true
+    }
+  ],
+  "privileges": [
+    {
+      "mask": 1,
+      "type": "global",
+      "account": "*"
+    },
+    {
+      "mask": 15,
+      "type": "global"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "OnetimeReservation",
+  "id": 9,
+  "title": "Onetime Reservation",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.2",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of onetime reservation.",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "The name of the repeated reservation",
+      "type": "Text",
+      "nullable": false,
+      "size": 60
+    },
+    {
+      "name": "date",
+      "title": "Date",
+      "description": "The date of the onetime reservation.",
+      "type": "Date",
+      "nullable": false
+    },
+    {
+      "name": "startTime",
+      "title": "Start Time",
+      "description": "The start time of the onetime reservation.",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "duration",
+      "title": "Duration",
+      "description": "Duration of the reservation in minutes",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "courseClass",
+      "title": "Course Class",
+      "description": "Course Class",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "room",
+      "title": "Room",
+      "description": "Room of the reservation",
+      "type": "Room",
+      "nullable": false
+    },
+    {
+      "name": "department",
+      "title": "Department",
+      "description": "Department of the reservation",
+      "type": "Department",
+      "nullable": false
+    },
+    {
+      "name": "status",
+      "title": "Status",
+      "description": "Status of the reservation [Enumeration]",
+      "type": "ReservationStatusType",
+      "nullable": false,
+      "expandable": true
+    },
+    {
+      "name": "note",
+      "title": "Note",
+      "description": "Additional notes about the reservation",
+      "type": "Text",
+      "nullable": false
+    }
+  ]
+}
+

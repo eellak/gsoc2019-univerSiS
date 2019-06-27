@@ -12,6 +12,7 @@ import sassMiddleware from 'node-sass-middleware';
 import { ExpressDataApplication, serviceRouter, dateReviver } from '@themost/express';
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
+import sessionRouter from './routes/session';
 
 /**
  * @name Request#context
@@ -74,6 +75,7 @@ app.use(express.static(path.join(process.cwd(), 'public')));
 app.use('/', indexRouter);
 
 app.use('/users', usersRouter);
+app.use('/session', sessionRouter);
 // use @themost/express service router
 app.use('/api', serviceRouter);
 

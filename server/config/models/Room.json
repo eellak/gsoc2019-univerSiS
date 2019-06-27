@@ -1,0 +1,72 @@
+{
+  "name": "Room",
+  "inherits": "Place",
+  "id": 4,
+  "title": "Room",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of the room entity",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "The name of the room",
+      "type": "Text",
+      "nullable": false,
+      "size": 60
+    },
+    {
+      "name": "description",
+      "title": "Description",
+      "description": "The description / information about the room",
+      "type": "Text",
+      "nullable": true
+    },
+    {
+      "name": "roomType",
+      "title": "Room Type",
+      "description": "This is the type of the given room.[Enumeration]",
+      "type": "Roomtype",
+      "expandable": true,
+      "nullable": false
+    },
+    {
+      "name": "capacity",
+      "title": "Capacity",
+      "description": "Capacity of the room.",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "roomFloor",
+      "title": "Room Floor",
+      "description": "The floor of the room in the building",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "department",
+      "title": "Department",
+      "description": "Department of the selected Room",
+      "type": "Department",
+      "expandable": true
+    },
+    {
+      "name": "building",
+      "title": "Building",
+      "description": "Building of the selected Room",
+      "type": "Building",
+      "expandable": true
+    }
+  ]
+}

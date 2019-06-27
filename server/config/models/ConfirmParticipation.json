@@ -1,0 +1,28 @@
+{
+  "name": "ConfirmParticipation",
+  "id": 13,
+  "title": "Confirm Participation",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of the confirmation.",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "student",
+      "title": "Student",
+      "description": "ID of the related student",
+      "type": "Student",
+      "expandable": true
+    }
+
+  ]
+}

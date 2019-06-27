@@ -1,0 +1,34 @@
+{
+    "name": "RepeatedReservationInstructors",
+    "id": 8,
+    "title": "Repeated Reservation Instructors",
+    "hidden": false,
+    "sealed": false,
+    "abstract": false,
+    "version": "1.1",
+    "fields": [
+      {
+        "name": "id",
+        "title": "Id",
+        "description": "The primary key of repeated reservation instructor.",
+        "type": "Counter",
+        "nullable": false,
+        "primary": true,
+        "size": 4
+      },
+      {
+        "name": "repeatedReservation",
+        "title": "Repeated Reservation",
+        "description": "Information of the repeated reservation",
+        "type": "RepeatedReservation",
+        "expandable": true
+      },
+      {
+        "name": "instructor",
+        "title": "Instructor",
+        "description": "Information of the instructor",
+        "type": "Instructor",
+        "expandable": true
+      }
+    ]
+  }

@@ -1,0 +1,182 @@
+{
+  "name": "CourseClass",
+  "id": 557961064,
+  "title": "Course Class",
+  "description": "Course information ",
+  "hidden": false,
+  "sealed": false,
+  "version": "1.0",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Κωδικός τάξης μαθήματος",
+      "description": "Ο κωδικός της τάξης του μαθήματος",
+      "type": "Text",
+      "nullable": false,
+      "primary": true,
+      "size": 22
+    },
+    {
+      "name": "course",
+      "title": "Μάθημα",
+      "description": "Το μάθημα στο οποίο αναφέρεται η τάξη.",
+      "type": "Course",
+      "nullable": false
+    },
+    {
+      "name": "year",
+      "title": "Ακαδημαϊκό έτος",
+      "description": "Ακαδημαϊκό έτος διδασκαλίας",
+      "type": "AcademicYear",
+      "expandable": true,
+      "nullable": false
+    },
+    {
+      "name": "period",
+      "title": "Περίοδος διδασκαλίας",
+      "description": "Ακαδημαϊκή περίοδος διδασκαλίας",
+      "type": "AcademicPeriod",
+      "nullable": false
+    },
+    {
+      "name": "status",
+      "title": "Κατάσταση τάξης",
+      "description": "Κατάσταση τάξης",
+      "type": "ClassStatus",
+      "nullable": false,
+      "mapping": {
+        "parentModel": "ClassStatus",
+        "childModel": "CourseClass",
+        "parentField": "identifier",
+        "childField": "status",
+        "associationType": "association"
+      }
+    },
+    {
+      "name": "statusModified",
+      "title": "Ημερομηνία αλλαγής κατάστασης",
+      "description": "Ημερομηνία αλλαγής κατάστασης",
+      "type": "DateTime",
+      "nullable": true
+    },
+    {
+      "name": "maxNumberOfStudents",
+      "title": "Μέγιστος αριθμός φοιτητών",
+      "description": "Μέγιστος αριθμός φοιτητών που δέχεται η τάξη",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "name": "minNumberOfStudents",
+      "title": "Ελάχιστος αριθμός φοιτητών",
+      "description": "Ελάχιστος αριθμός φοιτητών που δέχεται η τάξη",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "name": "weekHours",
+      "title": "Ώρες διδασκαλίας (ανά εβδομάδα)",
+      "description": "Ώρες διδασκαλίας (ανά εβδομάδα)",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "name": "totalHours",
+      "title": "Ώρες διδασκαλίας (περιόδου)",
+      "description": "Ο συνολικός αριθμός των ωρών που διδάσκεται το μάθημα την ακαδημαϊκή περίοδο",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "name": "absenceLimit",
+      "title": "Όριο απουσιών",
+      "description": "Όριο απουσιών",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "name": "numberOfStudents",
+      "title": "Αριθμός φοιτητών που δήλωσαν την τάξη",
+      "description": "Αριθμός φοιτητών που δήλωσαν την τάξη",
+      "type": "Integer",
+      "nullable": true,
+      "size": 4
+    },
+    {
+      "name": "title",
+      "title": "Τίτλος τάξης (μπορεί να διαφέρει ανά έτος)",
+      "description": "Τίτλος τάξης (μπορεί να διαφέρει ανά έτος)",
+      "type": "Text",
+      "nullable": true,
+      "size": 150
+    },
+    {
+      "name": "mustRegisterSection",
+      "title": "Επιλογή τμήματος τάξης",
+      "description": "Υποχρεωτική επιλογή τμήματος τάξης κατά τη δήλωση",
+      "type": "Boolean"
+    },
+    {
+      "name": "dateModified",
+      "title": "Ημερομηνία τελευταίας τροποποίησης",
+      "description": "Ημερομηνία τελευταίας τροποποίησης",
+      "type": "DateTime",
+      "nullable": false
+    },
+    {
+      "name": "sections",
+      "title": "Τμήματα τάξης",
+      "description": "Το σύνολο των τμημάτων της τάξης.",
+      "type": "CourseClassSection",
+      "many": true,
+      "mapping": {
+        "parentModel": "CourseClass",
+        "childModel": "CourseClassSection",
+        "parentField": "id",
+        "childField": "courseClass",
+        "cascade": "null",
+        "associationType": "association"
+      }
+    },
+    {
+      "name": "instructors",
+      "title": "Διδάσκοντες",
+      "description": "Το σύνολο των διδασκόντων της τάξης.",
+      "type": "CourseClassInstructor",
+      "many": true,
+      "mapping": {
+        "parentModel": "CourseClass",
+        "childModel": "CourseClassInstructor",
+        "parentField": "id",
+        "childField": "courseClass",
+        "cascade": "null",
+        "associationType": "association"
+      }
+    },
+    {
+      "name": "students",
+      "title": "Φοιτητές τάξης",
+      "type": "StudentCourseClass",
+      "many": true,
+      "mapping": {
+        "parentModel": "CourseClass",
+        "childModel": "StudentCourseClass",
+        "parentField": "id",
+        "childField": "courseClass",
+        "cascade": "null",
+        "associationType": "association"
+      }
+    }
+  ],
+  "privileges": [
+    {
+      "mask": 1,
+      "type": "global",
+      "account": "*"
+    },
+    {
+      "mask": 15,
+      "type": "global"
+    }
+  ]
+}

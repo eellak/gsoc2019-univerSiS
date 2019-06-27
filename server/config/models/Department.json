@@ -1,0 +1,208 @@
+{
+    "name": "Department",
+    "id": 1,
+    "title": "Department",
+    "hidden": false,
+    "sealed": false,
+    "version": "1.1",
+    "caching": "always",
+    "fields": [
+        {
+            "name": "id",
+            "title": "ID",
+            "description": "The primary key of the department.",
+            "type": "Counter",
+            "nullable": false,
+            "size": 5,
+            "primary": true
+        },
+        {
+            "name": "organization",
+            "title": "Organization",
+            "description": "The organization of the department",
+            "type": "Text",
+            "nullable": false
+        },
+        {
+            "name": "name",
+            "title": "Name",
+            "description": "Full name of the department",
+            "type": "Text",
+            "nullable": true,
+            "size": 255
+        },
+        {
+            "name": "abbreviation",
+            "title": "Abbreviation",
+            "description": "The abbreviation of the department name",
+            "type": "Text",
+            "nullable": true,
+            "size": 20
+        },
+        {
+            "name": "city",
+            "title": "City",
+            "description": "The main city of the department",
+            "type": "Text",
+            "nullable": true,
+            "size": 30
+        },
+        {
+            "name": "address",
+            "title": "Address",
+            "description": "The postal address of the department",
+            "type": "Text",
+            "nullable": true,
+            "size": 80
+        },
+        {
+            "name": "postalCode",
+            "title": "Postal Code",
+            "description": "The postal code of the department.",
+            "type": "Text",
+            "nullable": true,
+            "size": 8
+        },
+        {
+            "name": "country",
+            "title": "Country",
+            "description": "Country",
+            "type": "Text",
+            "nullable": true,
+            "size": 25
+        },
+        {
+            "name": "alternativeCode",
+            "title": "Alternative code",
+            "description": "Alternative code that can link the section to the corresponding code of another external system eg ministry etc.",
+            "type": "Text",
+            "nullable": true,
+            "size": 15
+        },
+        {
+            "name": "currentYear",
+            "title": "Current academic year",
+            "description": "The current academic year of the department",
+            "type": "AcademicYear",
+            "expandable": true
+        },
+        {
+            "name": "currentPeriod",
+            "title": "Current academic period",
+            "description": "Current academic period",
+            "expandable": true,
+            "type": "AcademicPeriod"
+        },
+        {
+            "name": "facultyName",
+            "title": "Name of faculty",
+            "description": "The name of the school if the department belongs to a school.",
+            "type": "Text",
+            "nullable": true,
+            "size": 150
+        },
+        {
+            "name": "phone1",
+            "title": "Phone No 1",
+            "description": "Contact number 1",
+            "type": "Text",
+            "nullable": true,
+            "size": 15
+        },
+        {
+            "name": "phone2",
+            "title": "Phone No 2",
+            "description": "Contact number 2",
+            "type": "Text",
+            "nullable": true,
+            "size": 15
+        },
+        {
+            "name": "studyLevel",
+            "title": "Level of education",
+            "description": "The level of study curricula offered by the department. (eg undergraduate, postgraduate, doctorate).",
+            "type": "StudyLevel",
+            "expandable": true,
+            "nullable": true,
+            "mapping": {
+                "parentModel": "StudyLevel",
+                "childModel": "Department",
+                "parentField": "identifier",
+                "childField": "studyLevel",
+                "associationType": "association"
+            }
+        },
+        {
+            "name": "contactPerson1",
+            "title": "Contact person 1",
+            "description": "Name of contact person 1",
+            "type": "Text",
+            "nullable": true,
+            "size": 60
+        },
+        {
+            "name": "contactPerson2",
+            "title": "Contact person 2",
+            "description": "Name of the contact person 2",
+            "type": "Text",
+            "nullable": true,
+            "size": 60
+        },
+        {
+            "name": "email",
+            "title": "Email",
+            "description": "The e-mail address of the department.",
+            "type": "Text",
+            "nullable": true,
+            "size": 50
+        },
+        {
+            "name": "totalSemesters",
+            "title": "Total semesters",
+            "description": "The typical number of semesters that lasts a department's curriculum",
+            "type": "Text",
+            "nullable": true,
+            "size": 2
+        },
+        {
+            "name": "url",
+            "title": "URL",
+            "description": "URL of the department",
+            "type": "Text",
+            "nullable": true,
+            "size": 255
+        },
+        {
+            "name": "localDepartment",
+            "title": "Local department",
+            "description": "If it is a local section or does not belong to the Foundation.",
+            "type": "Boolean",
+            "nullable": true
+        },
+        {
+            "name": "dateModified",
+            "title": "Last modified date",
+            "description": "Last modified date",
+            "type": "DateTime",
+            "nullable": false,
+            "size": 8
+        }
+    ],
+    "views": [
+        {
+            "name": "Local",
+            "filter": "localDepartment eq true"
+        }
+    ],
+    "privileges": [
+        {
+            "mask": 1,
+            "type": "global",
+            "account": "*"
+        },
+        {
+            "mask": 15,
+            "type": "global"
+        }
+    ]
+}

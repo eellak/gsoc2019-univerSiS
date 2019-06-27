@@ -1,0 +1,58 @@
+{
+  "name": "Building",
+  "inherits": "Place",
+  "id": 3,
+  "title": "Building",
+  "hidden": false,
+  "sealed": false,
+  "abstract": false,
+  "version": "1.1",
+  "fields": [
+    {
+      "name": "id",
+      "title": "Id",
+      "description": "The primary key of the building.",
+      "type": "Counter",
+      "nullable": false,
+      "primary": true,
+      "size": 4
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "description": "The name of the building",
+      "type": "Text",
+      "nullable": false,
+      "size": 60
+    },
+    {
+      "name": "description",
+      "title": "Description",
+      "description": "The description / information about the building",
+      "type": "Text",
+      "nullable": true
+    },
+    {
+      "name": "numberOfFloors",
+      "title": "Number of Floors",
+      "description": "This is a static fixed value which is not going to be changed.",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "name": "department",
+      "title": "Department",
+      "description": "Department of the building",
+      "type": "Department",
+      "expandable": true
+    }
+  ],
+  "constraints": [
+    {
+      "type": "unique",
+      "fields": [
+        "name"
+      ]
+    }
+  ]
+}
